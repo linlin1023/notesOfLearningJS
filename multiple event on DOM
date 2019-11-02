@@ -1,0 +1,28 @@
+someDOMele.onclick = eventhandler is a way to bind event handler on the DOM element for click, 
+but sometimes we want a DOM element to do multiple things on a single event.
+if we do like this: 
+someDOMele.onclick = eventhandlerOne
+someDOMele.onclick = eventhandlerTwo,
+the second event handler will take the precedence over the first one while clicking happen.
+
+The good news is the event handler is just one way of handling events. 
+Dangdangdang~ 
+We have a more mordern approach called event listener
+If we want to bind functions to browser-level events 
+or tie more than one function to an event we could use event listener.
+
+What does an event listener do?
+an event listener literally listens for an event to occur and then passes the event onto
+the specified function. 
+
+someDOMele.addEventListener("click",reveal, dalse ) //for example  a DOM node <a href="#" />
+1. we are monitoring the click event
+2. we will bind it to the reveal function.
+3. And define how we want the browser to capture the event, 
+    if from the most specific node we should set false,
+    if from the least specific node like DOM node, we should set true.
+    
+ the last parameter here is only relevant when you start piling events on top of one another. 
+ (bubbling, capture events, event dispatch, DOM event flow.)
+ 
+ 
